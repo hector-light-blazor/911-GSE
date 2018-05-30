@@ -1,0 +1,6 @@
+<left-panel  *ngIf="!_appService.swicthLeftPanel && !_appService.loginPanel"></left-panel>
+<address-results *ngIf="_appService.swicthLeftPanel"></address-results> 
+<esri-map *ngIf="!_appService.loginPanel"></esri-map>
+<app-login *ngIf="_appService.loginPanel"></app-login>
+
+ 

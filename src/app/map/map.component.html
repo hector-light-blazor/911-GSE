@@ -1,0 +1,14 @@
+<div (window:resize)="mapResize($event)" #map class="map">
+    <ng2-completer [(ngModel)]="searchStr" (selected)="onSelectedSearch($event)" (keyup.enter)="onEnterSearch()" [datasource]="dataService" [minSearchLength]="0">
+        
+    </ng2-completer>
+    <div class="btnEms">
+        <button class="btn btn-warning" (click)="openTable()">
+            <img src="assets/ems_icon.png" width="40" height="30">
+        </button>
+        
+    </div>
+</div>
+<app-table-data *ngIf="closeTableBool" [dataTable]="emsCalls" (closeUpdate)="closeTable($event)" (zoomTo)="zoomTo($event)">
+
+</app-table-data>

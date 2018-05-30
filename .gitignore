@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+#e2e
+/e2e
+
+#IDE - VSCode
+.vscode/*
+
+#files
+*.json
+*.conf.js
